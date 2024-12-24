@@ -1,0 +1,39 @@
+Nothing to build in platform 'design_1_wrapper'
+
+17:42:06 **** Incremental Build of configuration Debug for project final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/pilltong/Desktop/SoC_Final_Project/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: final.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/pilltong/Desktop/SoC_Final_Project/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bsplib/lib -o "final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: final.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size final.elf  |tee "final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114459	   4552	  24909	 143920	  23230	final.elf
+'Finished building: final.elf.size'
+' '
+17:42:08 **** Incremental Build of configuration Debug for project final_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 6981 C:/Users/pilltong/Desktop/SoC_Final_Project/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_psu_cortexa53_0 C:/Users/pilltong/Desktop/SoC_Final_Project/final_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/pilltong/Desktop/SoC_Final_Project/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/pilltong/Desktop/SoC_Final_Project/final_system/Debug/system.bif --bitstream C:/Users/pilltong/Desktop/SoC_Final_Project/final/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/pilltong/Desktop/SoC_Final_Project/final/Debug/final.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/pilltong/Desktop/SoC_Final_Project/final/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen -arch zynqmp -image C:/Users/pilltong/Desktop/SoC_Final_Project/final_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+Nothing to build in platform 'design_1_wrapper'
+
+17:45:11 **** Incremental Build of configuration Debug for project final ****
+make all 
+make: Nothing to be done for 'all'.
+17:45:13 **** Incremental Build of configuration Debug for project final_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 7495 C:/Users/pilltong/Desktop/SoC_Final_Project/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_psu_cortexa53_0 C:/Users/pilltong/Desktop/SoC_Final_Project/final_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/pilltong/Desktop/SoC_Final_Project/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/pilltong/Desktop/SoC_Final_Project/final_system/Debug/system.bif --bitstream C:/Users/pilltong/Desktop/SoC_Final_Project/final/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/pilltong/Desktop/SoC_Final_Project/final/Debug/final.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/pilltong/Desktop/SoC_Final_Project/final/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen -arch zynqmp -image C:/Users/pilltong/Desktop/SoC_Final_Project/final_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

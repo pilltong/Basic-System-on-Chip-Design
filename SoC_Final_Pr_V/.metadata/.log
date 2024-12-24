@@ -1,0 +1,201 @@
+!SESSION 2024-12-12 16:44:45.008 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\.metadata\.bak_1.log
+Created Time: 2024-12-12 17:49:24.808
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.808
+!MESSAGE XSCT command with result: [dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf], Result: [null, ]. Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.849
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.853
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.901
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.921
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.922
+!MESSAGE XSCT Command: [con], Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:24.962
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-15: Launching Debugger_final-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-12-12 17:49:24.963
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '10'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:36.632
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-1364
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 17:49:36.658
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [null, ]. Thread: Thread-1364
+!SESSION 2024-12-12 18:28:45.617 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2024-12-12 18:29:46.487
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.608
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.610
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.625
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.626
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.646
+!MESSAGE XSCT Command: [setws C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.658
+!MESSAGE XSCT command with result: [setws C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V], Result: [null, ]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:29:54.708
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-2: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:30:00.029
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-2: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:30:00.030
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-2: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 18:30:00.031
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2022.2/data]. Thread: Worker-2: Initializing s/w repositories
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-12 18:42:59.450
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-12 18:42:59.451
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-12 18:42:59.451
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2024-12-12 21:59:34.753 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V
+
+!ENTRY org.eclipse.ui 4 4 2024-12-12 21:59:38.992
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:42.898
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:42.901
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:42.911
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:42.926
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:42.930
+!MESSAGE XSCT Command: [setws C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:42.933
+!MESSAGE XSCT command with result: [setws C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:44.762
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:45.168
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:45.170
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-12 21:59:45.247
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2022.2/data]. Thread: Worker-5: Initializing s/w repositories
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-12 21:59:59.156
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-12 21:59:59.157
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-12 21:59:59.158
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2024-12-13 11:14:08.004 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2024-12-13 11:14:46.996
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:14:57.021
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:14:57.026
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:14:57.043
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.456
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.456
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.456
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.457
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.464
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2022.2/data]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.465
+!MESSAGE XSCT Command: [setws C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V], Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:15:03.486
+!MESSAGE XSCT command with result: [setws C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V], Result: [null, ]. Thread: Thread-21
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-13 11:18:24.334
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-13 11:18:24.334
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-13 11:18:24.335
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:18:26.993
+!MESSAGE XSCT Command: [platform read {C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/platform.spr}], Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:18:32.920
+!MESSAGE XSCT command with result: [platform read {C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/platform.spr}], Result: [null, ]. Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:18:32.947
+!MESSAGE XSCT Command: [platform active {design_1_wrapper}], Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:18:32.948
+!MESSAGE XSCT command with result: [platform active {design_1_wrapper}], Result: [null, ]. Thread: Worker-3: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:18:40.152
+!MESSAGE XSCT Command: [platform config -updatehw {C:/Users/souok/Desktop/SoC/SoC_Final_Project/design_1_wrapper.xsa}], Thread: Worker-9: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 11:18:52.307
+!MESSAGE XSCT command with result: [platform config -updatehw {C:/Users/souok/Desktop/SoC/SoC_Final_Project/design_1_wrapper.xsa}], Result: [null, ]. Thread: Worker-9: Updating hardware platform
