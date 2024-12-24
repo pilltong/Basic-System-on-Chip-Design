@@ -1,0 +1,1115 @@
+16:52:49 DEBUG : Logs will be stored at 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/IDE.log'.
+16:52:52 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\temp_xsdb_launch_script.tcl
+16:52:52 INFO  : Platform repository initialization has completed.
+16:52:52 INFO  : Registering command handlers for Vitis TCF services
+16:52:54 INFO  : XSCT server has started successfully.
+16:52:54 INFO  : Successfully done setting XSCT server connection channel  
+16:52:54 INFO  : plnx-install-location is set to ''
+16:52:54 INFO  : Successfully done setting workspace for the tool. 
+16:52:54 INFO  : Successfully done query RDI_DATADIR 
+16:53:52 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:53:52 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:53:52 WARN  : An unexpected exception occurred in the module 'platform project logging'
+16:53:52 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+16:53:58 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+16:55:06 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:55:06 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:55:06 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+16:55:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:55:41 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+16:55:41 INFO  : 'jtag frequency' command is executed.
+16:55:41 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+16:55:41 INFO  : Context for 'APU' is selected.
+16:55:42 INFO  : System reset is completed.
+16:55:45 INFO  : 'after 3000' command is executed.
+16:55:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+16:55:50 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+16:55:50 INFO  : Context for 'APU' is selected.
+16:55:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:55:51 INFO  : 'configparams force-mem-access 1' command is executed.
+16:55:51 INFO  : Context for 'APU' is selected.
+16:55:51 INFO  : Boot mode is read from the target.
+16:55:51 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:55:51 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:55:51 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:55:52 INFO  : 'set bp_55_51_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+16:55:52 INFO  : 'con -block -timeout 60' command is executed.
+16:55:52 INFO  : 'bpremove $bp_55_51_fsbl_bp' command is executed.
+16:55:52 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:55:52 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:55:53 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:55:53 INFO  : 'configparams force-mem-access 0' command is executed.
+16:55:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_55_51_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_55_51_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:55:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:55:53 INFO  : 'con' command is executed.
+16:55:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+16:55:53 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+16:57:46 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+16:57:53 INFO  : Disconnected from the channel tcfchan#2.
+16:57:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+16:58:03 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+16:58:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:07 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+16:58:07 INFO  : 'jtag frequency' command is executed.
+16:58:07 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+16:58:07 INFO  : Context for 'APU' is selected.
+16:58:07 INFO  : System reset is completed.
+16:58:10 INFO  : 'after 3000' command is executed.
+16:58:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+16:58:16 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+16:58:16 INFO  : Context for 'APU' is selected.
+16:58:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:58:16 INFO  : 'configparams force-mem-access 1' command is executed.
+16:58:16 INFO  : Context for 'APU' is selected.
+16:58:16 INFO  : Boot mode is read from the target.
+16:58:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:58:16 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:58:17 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:58:17 INFO  : 'set bp_58_17_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+16:58:18 INFO  : 'con -block -timeout 60' command is executed.
+16:58:18 INFO  : 'bpremove $bp_58_17_fsbl_bp' command is executed.
+16:58:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:58:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:58:19 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:58:19 INFO  : 'configparams force-mem-access 0' command is executed.
+16:58:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_58_17_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_58_17_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:58:19 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:58:19 INFO  : 'con' command is executed.
+16:58:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+16:58:19 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+16:58:40 INFO  : Disconnected from the channel tcfchan#3.
+16:58:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+16:58:50 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+16:58:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:53 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+16:58:53 INFO  : 'jtag frequency' command is executed.
+16:58:53 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+16:58:53 INFO  : Context for 'APU' is selected.
+16:58:53 INFO  : System reset is completed.
+16:58:56 INFO  : 'after 3000' command is executed.
+16:58:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+16:59:01 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+16:59:02 INFO  : Context for 'APU' is selected.
+16:59:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:59:02 INFO  : 'configparams force-mem-access 1' command is executed.
+16:59:02 INFO  : Context for 'APU' is selected.
+16:59:02 INFO  : Boot mode is read from the target.
+16:59:02 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:59:02 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:59:03 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:59:03 INFO  : 'set bp_59_3_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+16:59:03 INFO  : 'con -block -timeout 60' command is executed.
+16:59:03 INFO  : 'bpremove $bp_59_3_fsbl_bp' command is executed.
+16:59:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:59:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:59:04 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:59:04 INFO  : 'configparams force-mem-access 0' command is executed.
+16:59:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_59_3_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_59_3_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:59:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:59:04 INFO  : 'con' command is executed.
+16:59:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+16:59:04 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:02:24 INFO  : Disconnected from the channel tcfchan#4.
+17:18:03 DEBUG : Logs will be stored at 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/IDE.log'.
+17:18:04 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\temp_xsdb_launch_script.tcl
+17:18:07 INFO  : Registering command handlers for Vitis TCF services
+17:18:07 INFO  : Platform repository initialization has completed.
+17:18:07 INFO  : XSCT server has started successfully.
+17:18:07 INFO  : plnx-install-location is set to ''
+17:18:07 INFO  : Successfully done setting XSCT server connection channel  
+17:18:07 INFO  : Successfully done setting workspace for the tool. 
+17:18:07 INFO  : Successfully done query RDI_DATADIR 
+17:19:20 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+17:19:32 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:19:32 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:28:27 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+17:28:39 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:28:39 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:28:54 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:29:05 INFO  : The hardware specification used by project 'final' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:29:05 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+17:29:05 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream' in project 'final'.
+17:29:05 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit\psu_init.tcl' stored in project is removed.
+17:29:05 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit' in project 'final'.
+17:29:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:29:09 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:29:09 INFO  : 'jtag frequency' command is executed.
+17:29:09 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:29:09 INFO  : Context for 'APU' is selected.
+17:29:09 INFO  : System reset is completed.
+17:29:12 INFO  : 'after 3000' command is executed.
+17:29:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:29:17 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:29:17 INFO  : Context for 'APU' is selected.
+17:29:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:29:18 INFO  : 'configparams force-mem-access 1' command is executed.
+17:29:18 INFO  : Context for 'APU' is selected.
+17:29:18 INFO  : Boot mode is read from the target.
+17:29:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:29:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:29:18 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:29:19 INFO  : 'set bp_29_18_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:29:19 INFO  : 'con -block -timeout 60' command is executed.
+17:29:19 INFO  : 'bpremove $bp_29_18_fsbl_bp' command is executed.
+17:29:19 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:29:19 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:29:20 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:29:20 INFO  : 'configparams force-mem-access 0' command is executed.
+17:29:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_29_18_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_29_18_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:29:20 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:29:20 INFO  : 'con' command is executed.
+17:29:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:29:20 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:36:07 INFO  : Disconnected from the channel tcfchan#3.
+17:36:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:36:09 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:36:09 INFO  : 'jtag frequency' command is executed.
+17:36:09 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:36:09 INFO  : Context for 'APU' is selected.
+17:36:09 INFO  : System reset is completed.
+17:36:12 INFO  : 'after 3000' command is executed.
+17:36:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:36:18 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:36:18 INFO  : Context for 'APU' is selected.
+17:36:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:36:18 INFO  : 'configparams force-mem-access 1' command is executed.
+17:36:18 INFO  : Context for 'APU' is selected.
+17:36:18 INFO  : Boot mode is read from the target.
+17:36:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:36:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:36:19 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:36:19 INFO  : 'set bp_36_19_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:36:19 INFO  : 'con -block -timeout 60' command is executed.
+17:36:19 INFO  : 'bpremove $bp_36_19_fsbl_bp' command is executed.
+17:36:19 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:36:19 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:36:21 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:36:21 INFO  : 'configparams force-mem-access 0' command is executed.
+17:36:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_36_19_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_36_19_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:36:21 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:36:21 INFO  : 'con' command is executed.
+17:36:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:36:21 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:46:03 INFO  : Disconnected from the channel tcfchan#4.
+16:45:36 DEBUG : Logs will be stored at 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/IDE.log'.
+16:45:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\temp_xsdb_launch_script.tcl
+16:45:40 INFO  : Registering command handlers for Vitis TCF services
+16:45:40 INFO  : Platform repository initialization has completed.
+16:45:41 INFO  : XSCT server has started successfully.
+16:45:46 INFO  : Successfully done setting XSCT server connection channel  
+16:45:46 INFO  : plnx-install-location is set to ''
+16:45:46 INFO  : Successfully done query RDI_DATADIR 
+16:45:46 INFO  : Successfully done setting workspace for the tool. 
+16:49:48 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+16:50:05 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:50:05 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:51:00 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+16:51:23 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+16:52:13 INFO  : The hardware specification used by project 'final' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:52:13 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+16:52:13 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream' in project 'final'.
+16:52:13 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit\psu_init.tcl' stored in project is removed.
+16:52:14 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit' in project 'final'.
+16:52:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:52:18 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+16:52:18 INFO  : 'jtag frequency' command is executed.
+16:52:18 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+16:52:18 INFO  : Context for 'APU' is selected.
+16:52:19 INFO  : System reset is completed.
+16:52:22 INFO  : 'after 3000' command is executed.
+16:52:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+16:52:22 ERROR : couldn't open "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+16:52:22 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+16:52:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+16:52:22 ERROR : couldn't open "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+16:53:19 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+16:53:36 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:53:36 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:53:36 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+16:54:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:54:12 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+16:54:12 INFO  : 'jtag frequency' command is executed.
+16:54:12 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+16:54:12 INFO  : Context for 'APU' is selected.
+16:54:12 INFO  : System reset is completed.
+16:54:15 INFO  : 'after 3000' command is executed.
+16:54:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+16:54:16 ERROR : couldn't open "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+16:54:16 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+16:54:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+16:54:16 ERROR : couldn't open "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+16:56:02 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+16:56:20 INFO  : Result from executing command 'getProjects': design_1_wrapper
+16:56:20 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:56:21 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+16:56:34 INFO  : The hardware specification used by project 'final' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:56:34 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream\cycle_wrapper.bit' stored in project is removed.
+16:56:34 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream' in project 'final'.
+16:56:34 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit\psu_init.tcl' stored in project is removed.
+16:56:35 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit' in project 'final'.
+16:56:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:56:35 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+16:56:35 INFO  : 'jtag frequency' command is executed.
+16:56:35 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+16:56:35 INFO  : Context for 'APU' is selected.
+16:56:35 INFO  : System reset is completed.
+16:56:38 INFO  : 'after 3000' command is executed.
+16:56:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+16:56:43 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+16:56:43 INFO  : Context for 'APU' is selected.
+16:56:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+16:56:43 INFO  : 'configparams force-mem-access 1' command is executed.
+16:56:43 INFO  : Context for 'APU' is selected.
+16:56:43 INFO  : Boot mode is read from the target.
+16:56:43 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:56:44 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:56:44 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:56:44 INFO  : 'set bp_56_44_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+16:56:45 INFO  : 'con -block -timeout 60' command is executed.
+16:56:45 INFO  : 'bpremove $bp_56_44_fsbl_bp' command is executed.
+16:56:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:56:45 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+16:56:46 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+16:56:46 INFO  : 'configparams force-mem-access 0' command is executed.
+16:56:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_56_44_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_56_44_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:56:46 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+16:56:46 INFO  : 'con' command is executed.
+16:56:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+16:56:46 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:06:11 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+17:06:30 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:06:30 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:06:30 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:06:42 INFO  : Disconnected from the channel tcfchan#2.
+17:06:43 INFO  : The hardware specification used by project 'final' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:06:43 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+17:06:43 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream' in project 'final'.
+17:06:43 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit\psu_init.tcl' stored in project is removed.
+17:06:44 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit' in project 'final'.
+17:06:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:06:44 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:06:44 INFO  : 'jtag frequency' command is executed.
+17:06:44 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:06:45 INFO  : Context for 'APU' is selected.
+17:06:45 INFO  : System reset is completed.
+17:06:48 INFO  : 'after 3000' command is executed.
+17:06:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:06:52 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:06:52 INFO  : Context for 'APU' is selected.
+17:06:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:06:53 INFO  : 'configparams force-mem-access 1' command is executed.
+17:06:53 INFO  : Context for 'APU' is selected.
+17:06:53 INFO  : Boot mode is read from the target.
+17:06:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:06:53 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:06:53 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:06:53 INFO  : 'set bp_6_53_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:06:54 INFO  : 'con -block -timeout 60' command is executed.
+17:06:54 INFO  : 'bpremove $bp_6_53_fsbl_bp' command is executed.
+17:06:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:06:54 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:06:55 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:06:55 INFO  : 'configparams force-mem-access 0' command is executed.
+17:06:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_6_53_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_6_53_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:06:55 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:06:55 INFO  : 'con' command is executed.
+17:06:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:06:55 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:10:14 INFO  : Disconnected from the channel tcfchan#6.
+17:10:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:10:16 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:10:16 INFO  : 'jtag frequency' command is executed.
+17:10:16 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:10:16 INFO  : Context for 'APU' is selected.
+17:10:16 INFO  : System reset is completed.
+17:10:19 INFO  : 'after 3000' command is executed.
+17:10:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:10:25 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:10:25 INFO  : Context for 'APU' is selected.
+17:10:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:10:25 INFO  : 'configparams force-mem-access 1' command is executed.
+17:10:25 INFO  : Context for 'APU' is selected.
+17:10:25 INFO  : Boot mode is read from the target.
+17:10:25 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:10:25 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:10:26 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:10:26 INFO  : 'set bp_10_26_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:10:26 INFO  : 'con -block -timeout 60' command is executed.
+17:10:26 INFO  : 'bpremove $bp_10_26_fsbl_bp' command is executed.
+17:10:26 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:10:26 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:10:28 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:10:28 INFO  : 'configparams force-mem-access 0' command is executed.
+17:10:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_10_26_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_10_26_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:10:28 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:10:28 INFO  : 'con' command is executed.
+17:10:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:10:28 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:22:06 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+17:22:35 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:22:35 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:22:35 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:25:04 INFO  : Disconnected from the channel tcfchan#7.
+17:25:05 INFO  : The hardware specification used by project 'final' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:25:05 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+17:25:06 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream' in project 'final'.
+17:25:06 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit\psu_init.tcl' stored in project is removed.
+17:25:06 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit' in project 'final'.
+17:25:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:25:07 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:25:07 INFO  : 'jtag frequency' command is executed.
+17:25:07 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:25:07 INFO  : Context for 'APU' is selected.
+17:25:08 INFO  : System reset is completed.
+17:25:11 INFO  : 'after 3000' command is executed.
+17:25:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:25:16 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:25:16 INFO  : Context for 'APU' is selected.
+17:25:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:25:16 INFO  : 'configparams force-mem-access 1' command is executed.
+17:25:16 INFO  : Context for 'APU' is selected.
+17:25:16 INFO  : Boot mode is read from the target.
+17:25:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:25:17 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:25:17 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:25:17 INFO  : 'set bp_25_17_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:25:18 INFO  : 'con -block -timeout 60' command is executed.
+17:25:18 INFO  : 'bpremove $bp_25_17_fsbl_bp' command is executed.
+17:25:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:25:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:25:19 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:25:19 INFO  : 'configparams force-mem-access 0' command is executed.
+17:25:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_25_17_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_25_17_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:25:19 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:25:19 INFO  : 'con' command is executed.
+17:25:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:25:19 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:29:49 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:31:09 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:31:50 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:32:13 INFO  : Disconnected from the channel tcfchan#9.
+17:32:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:32:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+17:32:23 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+17:32:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:32:28 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:32:28 INFO  : 'jtag frequency' command is executed.
+17:32:28 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:32:28 INFO  : Context for 'APU' is selected.
+17:32:28 INFO  : System reset is completed.
+17:32:31 INFO  : 'after 3000' command is executed.
+17:32:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:32:37 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:32:37 INFO  : Context for 'APU' is selected.
+17:32:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:32:37 INFO  : 'configparams force-mem-access 1' command is executed.
+17:32:37 INFO  : Context for 'APU' is selected.
+17:32:37 INFO  : Boot mode is read from the target.
+17:32:37 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:32:37 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:32:38 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:32:38 INFO  : 'set bp_32_38_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:32:38 INFO  : 'con -block -timeout 60' command is executed.
+17:32:38 INFO  : 'bpremove $bp_32_38_fsbl_bp' command is executed.
+17:32:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:32:38 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:32:39 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:32:39 INFO  : 'configparams force-mem-access 0' command is executed.
+17:32:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_32_38_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_32_38_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:32:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:32:40 INFO  : 'con' command is executed.
+17:32:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:32:40 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:36:13 INFO  : Disconnected from the channel tcfchan#10.
+17:36:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:36:15 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:36:15 INFO  : 'jtag frequency' command is executed.
+17:36:15 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:36:15 INFO  : Context for 'APU' is selected.
+17:36:15 INFO  : System reset is completed.
+17:36:18 INFO  : 'after 3000' command is executed.
+17:36:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:36:23 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:36:24 INFO  : Context for 'APU' is selected.
+17:36:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:36:24 INFO  : 'configparams force-mem-access 1' command is executed.
+17:36:24 INFO  : Context for 'APU' is selected.
+17:36:24 INFO  : Boot mode is read from the target.
+17:36:24 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:36:24 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:36:25 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:36:25 INFO  : 'set bp_36_25_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:36:26 INFO  : 'con -block -timeout 60' command is executed.
+17:36:26 INFO  : 'bpremove $bp_36_25_fsbl_bp' command is executed.
+17:36:26 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:36:26 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:36:27 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:36:27 INFO  : 'configparams force-mem-access 0' command is executed.
+17:36:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_36_25_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_36_25_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:36:27 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:36:27 INFO  : 'con' command is executed.
+17:36:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:36:27 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:43:40 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+17:44:01 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:44:01 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:44:02 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:45:19 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:45:25 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:45:32 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:45:50 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:45:59 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:46:22 INFO  : Disconnected from the channel tcfchan#11.
+17:46:23 INFO  : The hardware specification used by project 'final' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:46:23 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+17:46:23 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\bitstream' in project 'final'.
+17:46:23 INFO  : The file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit\psu_init.tcl' stored in project is removed.
+17:46:24 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final\_ide\psinit' in project 'final'.
+17:46:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:46:25 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:46:25 INFO  : 'jtag frequency' command is executed.
+17:46:25 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:46:25 INFO  : Context for 'APU' is selected.
+17:46:25 INFO  : System reset is completed.
+17:46:28 INFO  : 'after 3000' command is executed.
+17:46:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:46:33 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:46:33 INFO  : Context for 'APU' is selected.
+17:46:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:46:33 INFO  : 'configparams force-mem-access 1' command is executed.
+17:46:33 INFO  : Context for 'APU' is selected.
+17:46:33 INFO  : Boot mode is read from the target.
+17:46:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:46:33 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:46:33 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:46:33 INFO  : 'set bp_46_33_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:46:35 INFO  : 'con -block -timeout 60' command is executed.
+17:46:35 INFO  : 'bpremove $bp_46_33_fsbl_bp' command is executed.
+17:46:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:46:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:46:35 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:46:35 INFO  : 'configparams force-mem-access 0' command is executed.
+17:46:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_46_33_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_46_33_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:46:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:46:35 INFO  : 'con' command is executed.
+17:46:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:46:35 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:46:56 INFO  : Disconnected from the channel tcfchan#13.
+17:46:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:46:57 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:46:57 INFO  : 'jtag frequency' command is executed.
+17:46:57 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:46:57 INFO  : Context for 'APU' is selected.
+17:46:57 INFO  : System reset is completed.
+17:47:00 INFO  : 'after 3000' command is executed.
+17:47:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:47:05 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:47:05 INFO  : Context for 'APU' is selected.
+17:47:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:47:05 INFO  : 'configparams force-mem-access 1' command is executed.
+17:47:05 INFO  : Context for 'APU' is selected.
+17:47:05 INFO  : Boot mode is read from the target.
+17:47:05 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:47:05 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:47:06 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:47:06 INFO  : 'set bp_47_6_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:47:07 INFO  : 'con -block -timeout 60' command is executed.
+17:47:07 INFO  : 'bpremove $bp_47_6_fsbl_bp' command is executed.
+17:47:07 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:47:07 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:47:08 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:47:08 INFO  : 'configparams force-mem-access 0' command is executed.
+17:47:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_47_6_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_47_6_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:47:08 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:47:08 INFO  : 'con' command is executed.
+17:47:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:47:08 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:47:22 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:47:37 INFO  : Disconnected from the channel tcfchan#14.
+17:47:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:47:45 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:47:45 INFO  : 'jtag frequency' command is executed.
+17:47:45 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:47:45 INFO  : Context for 'APU' is selected.
+17:47:45 INFO  : System reset is completed.
+17:47:48 INFO  : 'after 3000' command is executed.
+17:47:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:47:53 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:47:53 INFO  : Context for 'APU' is selected.
+17:47:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:47:53 INFO  : 'configparams force-mem-access 1' command is executed.
+17:47:53 INFO  : Context for 'APU' is selected.
+17:47:53 INFO  : Boot mode is read from the target.
+17:47:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:47:53 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:47:54 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:47:54 INFO  : 'set bp_47_54_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:47:55 INFO  : 'con -block -timeout 60' command is executed.
+17:47:55 INFO  : 'bpremove $bp_47_54_fsbl_bp' command is executed.
+17:47:55 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:47:55 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:47:56 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:47:56 INFO  : 'configparams force-mem-access 0' command is executed.
+17:47:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_47_54_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_47_54_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:47:56 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:47:56 INFO  : 'con' command is executed.
+17:47:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:47:56 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:48:31 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+17:48:45 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:48:45 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:48:46 INFO  : Checking for BSP changes to sync application flags for project 'final'...
+17:49:00 INFO  : Disconnected from the channel tcfchan#15.
+17:49:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:49:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+17:49:10 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+17:49:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:49:13 INFO  : Jtag cable 'Digilent JTAG-HS2 210249BA9F73' is selected.
+17:49:13 INFO  : 'jtag frequency' command is executed.
+17:49:13 INFO  : Sourcing of 'C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+17:49:13 INFO  : Context for 'APU' is selected.
+17:49:13 INFO  : System reset is completed.
+17:49:16 INFO  : 'after 3000' command is executed.
+17:49:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}' command is executed.
+17:49:21 INFO  : Device configured successfully with "C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit"
+17:49:21 INFO  : Context for 'APU' is selected.
+17:49:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:49:21 INFO  : 'configparams force-mem-access 1' command is executed.
+17:49:21 INFO  : Context for 'APU' is selected.
+17:49:21 INFO  : Boot mode is read from the target.
+17:49:21 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:49:21 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:49:22 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:49:22 INFO  : 'set bp_49_22_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+17:49:23 INFO  : 'con -block -timeout 60' command is executed.
+17:49:23 INFO  : 'bpremove $bp_49_22_fsbl_bp' command is executed.
+17:49:23 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:49:23 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+17:49:24 INFO  : The application 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf' is downloaded to processor 'psu_cortexa53_0'.
+17:49:24 INFO  : 'configparams force-mem-access 0' command is executed.
+17:49:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210249BA9F73" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210249BA9F73-14710093-0"}
+fpga -file C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_49_22_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_49_22_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/final/Debug/final.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:49:24 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+17:49:24 INFO  : 'con' command is executed.
+17:49:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+17:49:24 INFO  : Launch script is exported to file 'C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\final_system\_ide\scripts\debugger_final-default.tcl'
+17:49:36 INFO  : Disconnected from the channel tcfchan#17.
+18:29:49 DEBUG : Logs will be stored at 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/IDE.log'.
+18:29:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\temp_xsdb_launch_script.tcl
+18:29:54 INFO  : XSCT server has started successfully.
+18:29:54 INFO  : plnx-install-location is set to ''
+18:29:54 INFO  : Successfully done setting XSCT server connection channel  
+18:29:54 INFO  : Successfully done setting workspace for the tool. 
+18:29:55 INFO  : Registering command handlers for Vitis TCF services
+18:29:55 INFO  : Platform repository initialization has completed.
+18:30:00 INFO  : Successfully done query RDI_DATADIR 
+21:59:40 DEBUG : Logs will be stored at 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/IDE.log'.
+21:59:40 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\temp_xsdb_launch_script.tcl
+21:59:42 INFO  : XSCT server has started successfully.
+21:59:42 INFO  : plnx-install-location is set to ''
+21:59:42 INFO  : Successfully done setting XSCT server connection channel  
+21:59:42 INFO  : Successfully done setting workspace for the tool. 
+21:59:44 INFO  : Registering command handlers for Vitis TCF services
+21:59:45 INFO  : Successfully done query RDI_DATADIR 
+21:59:45 INFO  : Platform repository initialization has completed.
+11:14:49 DEBUG : Logs will be stored at 'C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/IDE.log'.
+11:14:49 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\souok\Desktop\SoC\SoC_Final_Pr_V\temp_xsdb_launch_script.tcl
+11:14:57 INFO  : XSCT server has started successfully.
+11:14:57 INFO  : Platform repository initialization has completed.
+11:14:58 INFO  : Registering command handlers for Vitis TCF services
+11:15:03 INFO  : plnx-install-location is set to ''
+11:15:03 INFO  : Successfully done setting XSCT server connection channel  
+11:15:03 INFO  : Successfully done query RDI_DATADIR 
+11:15:03 INFO  : Successfully done setting workspace for the tool. 
+11:18:52 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+11:19:54 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:19:54 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/souok/Desktop/SoC/SoC_Final_Pr_V/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
